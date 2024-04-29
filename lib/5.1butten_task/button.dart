@@ -107,6 +107,28 @@ class HomePage extends StatelessWidget {
                   border: Border.all(color: Colors.cyan,width: 2),
                   borderRadius: BorderRadius.circular(15),
                 ),
+                child:Column(
+                  children: [
+                       SizedBox(
+                         height: 10,
+
+                       ),
+                       Padding(
+                         padding: const EdgeInsets.all(8.0),
+                         child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                             ElevatedButton(onPressed: () {
+
+                             }, child:Icon(Icons.access_alarms,),
+                             ),
+                           ],
+                         ),
+                       ),
+
+
+                  ],
+                ),
               ),
 
             ],
