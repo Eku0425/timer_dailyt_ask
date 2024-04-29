@@ -64,6 +64,9 @@ class HomePage extends StatelessWidget {
                   height: 10,
 
                 ),
+
+
+
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -112,6 +115,7 @@ class HomePage extends StatelessWidget {
                        SizedBox(
                          height: 10,
 
+
                        ),
                        Padding(
                          padding: const EdgeInsets.all(8.0),
@@ -122,6 +126,27 @@ class HomePage extends StatelessWidget {
 
                              }, child:Icon(Icons.access_alarms,),
                              ),
+                             FilledButton(onPressed:  () {
+
+                             }, child: Icon(Icons.subdirectory_arrow_left,),
+
+                             ),
+                             FloatingActionButton(onPressed: () {
+
+                             },child: Icon(Icons.dialer_sip,size: 20,),
+                               backgroundColor: Colors.green,
+
+
+                             ),
+                             FloatingActionButton(onPressed: () {
+
+                             },child: Icon(Icons.settings_outlined,size: 25,),
+                             ),
+
+
+
+
+                             
                            ],
                          ),
                        ),
@@ -129,7 +154,77 @@ class HomePage extends StatelessWidget {
 
                   ],
                 ),
+
               ),
+              Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    height: 200,
+                    width: 400,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black,),
+                      borderRadius: BorderRadius.circular(15),
+                      
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+
+
+                                IconButton(onPressed: () {
+
+                                }, icon: Icon(Icons.settings_outlined,opticalSize: 10,),
+                                  color: Colors.black,
+
+                                ),
+
+
+
+                              IconButton(icon: const Icon(Icons.settings_outlined,color: Colors.black,size: 40,),
+                                onPressed: () {
+
+                                },
+
+
+
+                              ),
+                              IconButton( onPressed:() {
+
+                              },
+                                icon: Icon(Icons.access_alarms,color: Colors.black,size: 30,),
+                              ),
+                              
+
+
+
+
+
+
+
+
+
+                            ],
+                          ),
+                        )
+
+
+
+
+                      ],
+                    ),
+
+
+                  ),
+                ],
+              )
 
             ],
 
