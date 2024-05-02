@@ -1,16 +1,115 @@
-# timer_dailyt_ask
+# Button task
+<img src="https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/2f45a3d4-e2b2-4f55-840d-8b17c1f76377" width=20% height=20%>
 
-A new Flutter project.
 
-## Getting Started
+# Que&Ans:-
+# What is  Asynchronous Programming?
 
-This project is a starting point for a Flutter application.
+Asynchronous programming is a programming paradigm that allows tasks or operations to run independently and concurrently, without waiting for each other to complete before moving on to the next task. In traditional synchronous programming, tasks are executed one after another, and the program waits for each task to finish before proceeding to the next one.
 
-A few resources to get you started if this is your first Flutter project:
+# What is Future Class ?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ the Future class represents a future result of an asynchronous computation. This result will eventually appear in the Future after the processing is complete. Let's see how to write methods that create and return a Future instance.
+ 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# What is Duration class & Future.delayed() constructor with Example ?
+ 
+Delayed Flutter is a constructor that creates a future which runs its computation after a delay. The Future. delayed constructor has two arguments. The first argument is a Duration object which specifies the delay before the callback function is executed, and the second argument is the callback function.
+
+
+
+# # Code Example:-
+
+Clone the project
+
+```bash
+ void main() {
+  Future.delayed(
+    Duration(seconds: 3),
+    
+    () {
+      print("Jay Mogal");
+
+     }
+  );
+  
+}
+
+```
+# What is Recursion ? With Example. 
+
+Recursion is a programming technique where a function calls itself directly or indirectly in order to solve a problem. In recursive functions, the function keeps calling itself with smaller instances of the problem until it reaches a base case where the solution can be directly computed without further recursion. Recursion is commonly used in problems that can be broken down into smaller, similar subproblems.
+
+## CODE
+
+```bash
+void main() {  
+  int factorial(int num){  
+    
+ if(num<=1) { // base case  
+       return 1;  
+ else{  
+        return n*fact(n-1);  
+     }  
+   }      
+  }  
+}  
+```
+# What is Timer class with example ?
+
+The Timer class is a utility class in many programming languages that allows you to schedule tasks to be executed at a specified time or after a specified delay. It's commonly used in scenarios where you need to perform an action periodically or after a certain interval.
+
+## CODE Example:-
+
+```bash
+import 'dart:async';
+
+void main(){
+
+ print("Hello Android!");
+
+ Timer(Duration(seconds: 3), () { 
+   print("Hello Dart!");
+ });
+
+ print("Hello Flutter!");
+}
+```
+# What is Timer.periodic and use with Example?
+
+Timer.periodic is a feature available in some programming languages and libraries that allows you to schedule a task to be executed repeatedly at fixed intervals. It's similar to Timer, but it automatically reschedules itself to run at the specified interval after each execution.
+
+## CODE Example:-
+
+```bash
+import 'dart:async';
+
+void main() {
+  Future.delayed(
+    Duration(seconds: 3),
+    
+    () {
+      print("Jay Mogal");
+
+     }
+  );
+  Timer.periodic(Duration(seconds: 1), (timer) { 
+    print("JAY MAA MOGAL");
+  }
+  );
+  
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
