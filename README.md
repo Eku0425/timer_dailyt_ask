@@ -7,6 +7,11 @@
 
 
 
+# analog clock
+<img src="https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/30568d66-3978-4430-82ab-c918f21733d3" width =20% height =20%>
+
+
+
 
 
 https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/3f2c3705-0f52-41b3-8bed-73c4c2c43767
