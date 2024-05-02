@@ -7,18 +7,18 @@
 
 
 
+https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/7c1c6ae7-a87d-468d-88ea-a291f2030ad8
+
+
+
 # analog clock
 <img src="https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/30568d66-3978-4430-82ab-c918f21733d3" width =20% height =20%>
 
 
 
 
+https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/2094055e-92a8-495b-8a65-51c899180ee2
 
-
-
-
-
-https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/3f2c3705-0f52-41b3-8bed-73c4c2c43767
 
 
 # Que&Ans:-
