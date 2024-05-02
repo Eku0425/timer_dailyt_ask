@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/global.dart';
@@ -98,189 +99,107 @@ class _Digital_AppState extends State<Digital_App> {
               image: AssetImage('assets/img/1.jpg'),
             ),
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 15),
-                  child: Icon(Icons.lock,size: 25,color: Colors.white,),
+          child: Column(
+            children: [
+              SizedBox(height: 250,),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15),
+                child: Icon(
+                  Icons.lock,
+                  size: 25,
+                  color: Colors.white,
                 ),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text:
-                            '${dateTime.hour % 12} : ${dateTime.minute}:${dateTime.second}',
+              ),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text:
+                          '${dateTime.hour % 12} : ${dateTime.minute}:${dateTime.second}',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '$time',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: day,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextSpan(
+                      text: ', ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '${dateTime.day} ',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    TextSpan(
+                      text: month,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 350,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  OutlinedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/analogue');
+                      },
+                      child: Text(
+                        'Analogue',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
                         ),
-                      ),
-                      TextSpan(
-                        text: '$time',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                    ],
-                  ),
-                ),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: day,
+                      )),
+                  OutlinedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/digital');
+                      },
+                      child: Text(
+                        'Digital',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
                         ),
-                      ),
-                      TextSpan(
-                        text: ', ',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextSpan(
-                        text: '${dateTime.day} ',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextSpan(
-                        text: month,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  height: 190,
-                  width: 190,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white, width: 3),
-                  ),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Transform.rotate(
-                        angle: (dateTime.hour % 12 + dateTime.minute/60) * 30 * pi/180,
-                        child: Center(
-                          child: VerticalDivider(
-                            thickness: 3,
-                            color: Colors.white,
-                            indent: 50,
-                            endIndent: 90,
-                          ),
-                        ),
-                        ),
-
-                      ...List.generate(
-                        60,
-                            (index) => Transform.rotate(
-                          angle:( (index + 1)*6*pi)/180,
-                          child: ((index+1)%5==0)
-                              ?
-                          const VerticalDivider(
-                            thickness: 4,
-                            color: Colors.red,
-                            indent: 0,
-                            endIndent: 170,
-                          )
-                              :
-                          VerticalDivider(
-                            thickness: 4,
-                            color: Colors.white70,
-                            indent: 0,
-                            endIndent: 170,
-                          ),
-                        ),
-                      ),
-                      Center(
-                        child: Container(
-                          height: 10,
-                          width: 10,
-                          decoration: BoxDecoration(
-                              color: Colors.black, shape: BoxShape.circle),
-                        ),
-
-                      ),
-
-                      Transform.rotate(
-                        angle: (dateTime.minute * 6 * pi) / 180,
-                        child: Center(
-                          child: VerticalDivider(
-                            thickness: 3,
-                            color: Colors.white,
-                            indent: 30,
-                            endIndent: 90,
-                          ),
-                        ),
-                      ),
-                      Transform.rotate(
-                        angle: (dateTime.second * 6 * pi) / 180,
-                        child: Center(
-                          child: VerticalDivider(
-                            thickness: 3,
-                            color: Colors.red,
-                            indent: 20,
-                            endIndent: 80,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 360),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-
-                          color: Colors.blueGrey,
-                        ),
-                        child: Icon(Icons.camera_alt_outlined,size: 30,color: Colors.black,),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(10),
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-
-                          color: Colors.blueGrey,
-                        ),
-                        child: Icon(Icons.phone,size: 30,color: Colors.black,),
-                      ),
-                    ],
-
-                  ),
-                ),
-              ],
-            ),
+                      )),
+                ],
+              ),
+            ],
           ),
-
         ),
-
       ),
     );
   }
