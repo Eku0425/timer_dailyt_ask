@@ -102,14 +102,7 @@ class _Digital_AppState extends State<Digital_App> {
           child: Column(
             children: [
               SizedBox(height: 250,),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 15),
-                child: Icon(
-                  Icons.lock,
-                  size: 25,
-                  color: Colors.white,
-                ),
-              ),
+
               Text.rich(
                 TextSpan(
                   children: [

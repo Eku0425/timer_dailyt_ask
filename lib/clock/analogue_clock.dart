@@ -181,7 +181,7 @@ class _AnalougeClockState extends State<AnalougeClock> {
                 ),
               ),
               SizedBox(height: 330,),
-              Row(
+             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   OutlinedButton(
