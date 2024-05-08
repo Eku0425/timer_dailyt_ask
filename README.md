@@ -119,11 +119,9 @@ void main() {
   
 }
 ```
-
-
-
-
-
+<img src= "https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/928efa2d-200c-44f6-9478-7902099fb1e7" height=25% width=25%>
+<img src="https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/779e9557-9ed4-4c90-b4a9-079d10e9f8c1" height=25% width=25%>
+<img src="https://github.com/Eku0425/timer_dailyt_ask/assets/149374328/8c80b1f6-6090-4920-ae50-ffb2706e31fc" height=25% width=25%>
 
 
 
